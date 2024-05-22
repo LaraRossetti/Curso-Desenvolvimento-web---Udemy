@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da troca</title>
+    <style>
+        h1{
+            font: normal 40pt Times;
+            color: darkgreen;
+        }
+        body{
+            background-color: lightgreen;
+        }
+        div#frase{
+            font: normal 17pt Times;
+        }
+        strong#letraA{
+            
+            margin-right: 182px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio da troca</h1>
+    <div id="frase">Coloque dois valores para serem trocados de posição:</div>
+    <div>
+        <p>
+            <strong>A:</strong> <input type="number" id="numero1txt" name="numero1txt">
+            <strong>B:</strong> <input type="number" id="numero2txt" name="numero2txt">
+            <input type="button" value="Trocar" onclick="Trocar()">
+        </p>
+    </div>
+    <div id="resultado">
+        <strong id="letraA">A: <span id="numero1"></span></strong>
+        <strong>B: <span id="numero2"></span></strong> 
+    </div>
+    <script>
+        function Trocar(){
+            let numero1 = window.document.getElementById('numero1txt')
+            let numero2 = window.document.getElementById('numero2txt')
+            let resultadon1 = window.document.getElementById('numero1')
+            let resultadon2 = window.document.getElementById('numero2')
+
+            let a = Number(numero2.value)
+            let b = Number(numero1.value)
+
+            resultadon1.innerHTML = a
+            resultadon2.innerHTML = b
+        }
+    </script>
+</body>
+</html>
